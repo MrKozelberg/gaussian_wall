@@ -147,13 +147,31 @@ contains
    	end subroutine T_vs_M
 
    	subroutine err_vs_M_vs_R()
-   		integer, dimension(30) :: mm = [(100+1000*(i-1), i=1, 30)]
-   		real(8), dimension(30) :: rr = [(i/2, i=1, 20)]
+   		integer, dimension(150) :: mm = [(200*i, i=1, 150)]
+   		real(8), dimension(150) :: rr = [(2+i/15, i=1, 150)]
 
-   		real(8) :: v0 = -5.0, e1 = -3.12327, e2 = -1.27170   ! <- you are here!!
+   		real(8) :: v0 = -5.0, e1 = -3.1403341, e2 = -0.40612095
+
+   		! real(8) :: v0 = -1.0, e1 = -0.3539918, e2 = 0.0   ! <- you are here!!
 
    		real(8), dimension(size(mm)) :: err1, err2
-   		integer :: io1, io2
+   		integer :: io1, io2, ior, iom
+
+   		open(newunit=ior, file="../output/r.txt")
+
+   		do i = 1, size(rr)
+   			write(ior, *) rr(i)
+   		end do
+
+   		close(ior)
+
+   		open(newunit=iom, file="../output/m.txt")
+
+   		do i = 1, size(mm)
+   			write(iom, *) mm(i)
+   		end do
+
+   		close(iom)
 
    		open(newunit=io1, file="../output/err1.txt")
    		open(newunit=io2, file="../output/err2.txt")
@@ -168,13 +186,13 @@ contains
 
    				if (N .eq. 0) then
 
-   					err1(j) = 10
-   					err2(j) = 10
+   					err1(j) = 1
+   					err2(j) = 1
 
    				else if (N .eq. 1) then
 
    					err1(j) = w(1) - e1
-   					err2(j) = 10
+   					err2(j) = 1
 
    				else
 
@@ -207,7 +225,7 @@ program src
 	! real(8) :: v0, rr
 	! integer :: mm
 
-	! v0 = -1; rr = 5.0; mm = 1500
+	! v0 = -5.0; rr = 15.0; mm = 30000
 
 	! call init(v0, rr, mm)
 

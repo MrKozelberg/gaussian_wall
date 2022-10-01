@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.8.18)  1 OCT 2022 01:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.8.18)  1 OCT 2022 14:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -617,26 +617,26 @@ File: pppdftex.def 2021/03/06 v0.5t Pdfpages driver for pdfTeX (AM)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -672,7 +672,7 @@ LaTeX Font Info:    ... okay on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 27.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -684,15 +684,15 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count288
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Info: Redefining \th on input line 26.
+LaTeX Info: Redefining \th on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -724,13 +724,13 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )<<ot1.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -738,40 +738,41 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../figures/num_eigen_vs_v0.pdf, id=47, 433.62pt x 289.08pt>
+<../figures/num_eigen_vs_v0.pdf, id=51, 433.62pt x 289.08pt>
 File: ../figures/num_eigen_vs_v0.pdf Graphic file (type pdf)
 <use ../figures/num_eigen_vs_v0.pdf>
-Package pdftex.def Info: ../figures/num_eigen_vs_v0.pdf  used on input line 116
+Package pdftex.def Info: ../figures/num_eigen_vs_v0.pdf  used on input line 117
 .
 (pdftex.def)             Requested size: 241.84842pt x 161.23528pt.
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-120.
-
-(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-Overfull \hbox (32.01167pt too wide) in paragraph at lines 113--121
-\T2A/cmr/m/n/10 то видно, что полученный результат достаточно сильно расходится
- с результатами решения задачи вариационным
- []
-
-<../figures/T_vs_M.pdf, id=51, 426.22206pt x 284.12022pt>
+<../figures/T_vs_M.pdf, id=56, 426.22206pt x 284.12022pt>
 File: ../figures/T_vs_M.pdf Graphic file (type pdf)
 <use ../figures/T_vs_M.pdf>
-Package pdftex.def Info: ../figures/T_vs_M.pdf  used on input line 127.
+Package pdftex.def Info: ../figures/T_vs_M.pdf  used on input line 129.
 (pdftex.def)             Requested size: 241.84842pt x 161.2132pt.
-[2 <../figures/num_eigen_vs_v0.pdf>] [3 <../figures/T_vs_M.pdf>] (./main.aux)
+ [2 <../figures/num_eigen_vs_v0.pdf>]
+<../figures/abserr.pdf, id=93, 433.62pt x 289.08pt>
+File: ../figures/abserr.pdf Graphic file (type pdf)
+<use ../figures/abserr.pdf>
+Package pdftex.def Info: ../figures/abserr.pdf  used on input line 139.
+(pdftex.def)             Requested size: 241.84842pt x 161.23528pt.
+<../figures/abserr_v0_5.pdf, id=95, 1156.32pt x 650.43pt>
+File: ../figures/abserr_v0_5.pdf Graphic file (type pdf)
+<use ../figures/abserr_v0_5.pdf>
+Package pdftex.def Info: ../figures/abserr_v0_5.pdf  used on input line 147.
+(pdftex.def)             Requested size: 483.69684pt x 272.07709pt.
+ [3 <../figures/T_vs_M.pdf> <../figures/abserr.pdf>] [4 <../figures/abserr_v0_5
+.pdf>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C1C1DF1062FE6D8FA48002956AC1C661;1193.
+(rerunfilecheck)             Checksum: BAACDE8F6CDDB3606ABF95D80187F522;1868.
  ) 
 Here is how much of TeX's memory you used:
- 13029 strings out of 480806
- 182982 string characters out of 5905151
- 518424 words of memory out of 6000000
- 30142 multiletter control sequences out of 15000+600000
- 416524 words of font info for 62 fonts, out of 8000000 for 9000
+ 13024 strings out of 480806
+ 182798 string characters out of 5905151
+ 519060 words of memory out of 6000000
+ 30140 multiletter control sequences out of 15000+600000
+ 414676 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 68i,23n,77p,816b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,23n,77p,816b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -782,16 +783,14 @@ ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/s
-fbx1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0600
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (3 pages, 200947 bytes).
+fbx1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on main.pdf (4 pages, 414604 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
