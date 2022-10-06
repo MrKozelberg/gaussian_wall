@@ -1,2 +1,2 @@
 # The quantum Gaussian well
-* here you could see the solution *
+This repository provides program written on Fortran to solve the Schrödinger equation with the Gaussian well.
