@@ -146,18 +146,18 @@ contains
       	close(io)
    	end subroutine T_vs_M
 
-   	subroutine err_vs_M_vs_R()
+   	subroutine E_vs_M_vs_R(v0, ch)
    		integer, dimension(150) :: mm = [(200*i, i=1, 150)]
-   		real(8), dimension(150) :: rr = [(2+i/15, i=1, 150)]
+   		real(8), dimension(150) :: rr = [(2+real(i,8)/15.0, i=1, 150)]
 
-   		real(8) :: v0 = -5.0, e1 = -3.1403341, e2 = -0.40612095
+   		real(8), intent(in) :: v0
+   		character, intent(in) :: ch
 
-   		! real(8) :: v0 = -1.0, e1 = -0.3539918, e2 = 0.0   ! <- you are here!!
+   		! We consider only first three levels
+   		real(8), dimension(size(mm)) :: e1, e2, e3
+   		integer :: io1, io2, io3, ior, iom
 
-   		real(8), dimension(size(mm)) :: err1, err2
-   		integer :: io1, io2, ior, iom
-
-   		open(newunit=ior, file="../output/r.txt")
+   		open(newunit=ior, file="../output/r_"//ch//".txt")
 
    		do i = 1, size(rr)
    			write(ior, *) rr(i)
@@ -165,7 +165,7 @@ contains
 
    		close(ior)
 
-   		open(newunit=iom, file="../output/m.txt")
+   		open(newunit=iom, file="../output/m_"//ch//".txt")
 
    		do i = 1, size(mm)
    			write(iom, *) mm(i)
@@ -173,11 +173,12 @@ contains
 
    		close(iom)
 
-   		open(newunit=io1, file="../output/err1.txt")
-   		open(newunit=io2, file="../output/err2.txt")
+   		open(newunit=io1, file="../output/e1_"//ch//".txt")
+   		open(newunit=io2, file="../output/e2_"//ch//".txt")
+   		open(newunit=io3, file="../output/e3_"//ch//".txt")
 
    		do i = 1, size(rr)
-   			err1(:) = 0.0; err2(:) = 0.0
+   			e1(:) = 0.0; e2(:) = 0.0; e3(:) = 0.0
 
    			do j = 1, size(mm)
    				call init(v0, rr(i), mm(j))
@@ -186,18 +187,27 @@ contains
 
    				if (N .eq. 0) then
 
-   					err1(j) = 1
-   					err2(j) = 1
+   					e1(j) = 1
+   					e2(j) = 1
+   					e3(j) = 1
 
    				else if (N .eq. 1) then
 
-   					err1(j) = w(1) - e1
-   					err2(j) = 1
+   					e1(j) = w(1)
+   					e2(j) = 1
+   					e3(j) = 1
+
+   				else if (N .eq. 2) then
+
+   					e1(j) = w(1)
+   					e2(j) = w(2)
+   					e3(j) = 1
 
    				else
 
-   					err1(j) = w(1) - e1
-   					err2(j) = w(2) - e2
+   					e1(j) = w(1)
+   					e2(j) = w(2)
+   					e3(j) = w(3)
 
    				end if
 
@@ -205,15 +215,17 @@ contains
 
    			end do
 
-   			write(io1, *) err1(:)
-   			write(io2, *) err2(:)
+   			write(io1, *) e1(:)
+   			write(io2, *) e2(:)
+   			write(io3, *) e3(:)
 
    		end do
       	
+      	close(io3)
       	close(io2)
       	close(io1)
 
-   	end subroutine err_vs_M_vs_R
+   	end subroutine E_vs_M_vs_R
 
 end module task
 
@@ -244,5 +256,5 @@ program src
 	! call T_vs_M()
 
 	! Third part of the task
-	call err_vs_M_vs_R()
+	call E_vs_M_vs_R(real(-1.0,8),"-1")
 end program src
