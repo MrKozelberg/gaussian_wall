@@ -80,7 +80,14 @@
         \Psi_{k}(x) = \qty{- \dfrac{1}{\delta^2}(x-x_k)^3 + (x-x_k)} \cdot \theta(x>x_{k-1}) \cdot \theta(x<x_{k+1}).\\
     \end{split}
 \end{equation}
-Из таких функций нужно собирать набор $S_l(x)$, по которому будем раскладывать нашу волновую функцию. Набор функций можно ввести следующим образом:
+Ниже пригодятся выражения для вторых производных этих функций, поэтому выпишем их
+\begin{equation}
+    \begin{split}
+        \Phi^{\prime\prime}_{k}(x) = 0,\\
+        \Psi^{\prime\prime}_{k}(x) = \qty{- \dfrac{6}{\delta^2}(x-x_k)} \cdot \theta(x>x_{k-1}) \cdot \theta(x<x_{k+1}).\\
+    \end{split}
+\end{equation}
+Из функций $\Psi$ и $\Phi$ нужно собирать набор, по которому будем раскладывать нашу волновую функцию. Набор функций можно ввести следующим образом:
 \begin{equation}
     S_l(x) =
     \begin{cases}
