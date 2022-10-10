@@ -37,11 +37,12 @@ contains
 		deallocate(z)
 	end subroutine dealloc
 
-	subroutine iterations_method(iter_num)
+	subroutine iterations_method(iter_num, E_1)
 		implicit none
 		integer, intent(in) :: iter_num
 		real(8) :: H(M-1,M-1), H_(M-1,M-1), id(M-1,M-1)
-		real(8) :: E_max, E_min, phi_1(M-1), phi_2(M-1)
+		real(8) :: E_max, phi_1(M-1), phi_2(M-1), lambda
+		real(8), intent(out) :: E_1
 
 		! Hamiltonian
 		H(:,:) = 0.0
@@ -57,9 +58,8 @@ contains
 			end if
 		end do
 
-		! phi_1 = [(exp(-x(i)**2), i=1, M-1)]
-		! phi_1 = phi_1 / norm2(phi_1)
-		phi_1(:) = 1/delta
+		phi_1 = [(sin(x(i)), i=1, M-1)]
+		phi_1 = phi_1 / norm2(phi_1)
 		do i = 1, 1000
 			phi_2 = matmul(H, phi_1)
 			phi_2 = phi_2 / norm2(phi_2)
@@ -68,7 +68,7 @@ contains
 
 		E_max = dot_product(matmul(H, phi_1), phi_1)
 
-		print *, 'E_max is ', E_max
+		! print *, 'E_max is ', E_max
 
 		id(:,:) = 0.0
 		do i = 1, M-1
@@ -77,50 +77,51 @@ contains
 
 		H_ = H - E_max/2.0 * id
 
-		phi_1 = [(1/cosh(x(i))**(2), i=1, M-1)]
+		phi_1 = [(exp(-x(i)**2), i=1, M-1)]
 		phi_1 = phi_1 / norm2(phi_1)
 		do i = 1, iter_num
 			phi_2 = matmul(H_, phi_1)
+			lambda = dot_product(phi_2, phi_1)
 			phi_2 = phi_2 / norm2(phi_2)
 			phi_1 = phi_2
 		end do
 
-		E_min = dot_product(matmul(H_, phi_1), phi_1)
-
-		print *, 'E_1 is ', E_min + E_max/2.0
-
+		E_1 = lambda + E_max/2.0
 
 	end subroutine iterations_method
 	
-   	! subroutine T_vs_M()
-   	! 	integer, dimension(300) :: mm = [(100*i, i=1, 300)]
+   	subroutine T_vs_M()
+   		integer, dimension(30) :: mm = [(100*i, i=1, 30)]
 
-    !   	real(8) :: rr = 6.0, v0 = -1.0
-    !   	real(4) :: start_time, finish_time
-    !   	integer :: io
+      	real(8) :: rr = 5.0, v0 = -5.0
+      	real(4) :: start_time, finish_time
+      	real(8) :: energ_1
+      	integer :: io
 
-    !   	open(newunit=io, file="../output/T_vs_M.txt")
+      	open(newunit=io, file="../output/T_vs_M.txt")
 
-    !   	write(io, *) '# M # T, sec' 
+      	write(io, *) '# M # T, sec # E_1' 
 
-    !   	do i = 1, size(mm)
+      	do j = 1, size(mm)
 
-    !      	call cpu_time(start_time)
+      		print *, 'M=', mm(j)
 
-    !      	call init(v0, rr, mm(i))
+         	call cpu_time(start_time)
 
-    !      	call solver()
+         	call init(v0, rr, mm(j))
 
-    !      	call cpu_time(finish_time)
+			call iterations_method(1000, energ_1)
 
-    !      	call dealloc()
+         	call cpu_time(finish_time)
 
-    !      	write(io, *) M, finish_time - start_time
+         	call dealloc()
 
-    !   	end do
+         	write(io, *) M, finish_time - start_time, energ_1
 
-    !   	close(io)
-   	! end subroutine T_vs_M
+      	end do
+
+      	close(io)
+   	end subroutine T_vs_M
 
 end module task
 
@@ -129,27 +130,17 @@ program src
 	implicit none
 
 	! test
-	real(8) :: v0, rr
-	integer :: mm
+	! real(8) :: v0, rr
+	! integer :: mm
 
-	v0 = -1.0; rr = 6.0; mm = 1000
+	! v0 = -1.0; rr = 9.0; mm = 3000
 
-	call init(v0, rr, mm)
+	! call init(v0, rr, mm)
 
-	call iterations_method(10000)
+	! call iterations_method(2001)
 
-	! write(*, *) 'N = ', N
+	! print *, 'True answer is −3.140334020243438'
 
-	! do i = 1, N
-	! 	write(*, *) i, w(i)
-	! end do
+	call T_vs_M()
 
-	! First part of the task
-	! call N_vs_v0()
-
-	! Second part of the task
-	! call T_vs_M()
-
-	! Third part of the task
-	! call E_vs_M_vs_R(real(-1.0,8),"-1")
 end program src
